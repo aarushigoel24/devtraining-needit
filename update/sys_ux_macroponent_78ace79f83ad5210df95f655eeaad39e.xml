@@ -359,7 +359,99 @@
                                 },
                                 "elementId": "overdue_needits_score",
                                 "elementLabel": "Overdue NeedIts score",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "cmddgghdvjjffaabbwhhddffiiffjjnffggjjgcc",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "x_58872_needit.NAV_ITEM_SELECTED_RELAY_78ace79f83ad5210df95f655eeaad39e",
+                                                    "payload": {
+                                                        "container": {
+                                                            "external": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "fields": {
+                                                                "container": {
+                                                                    "table": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": "x_58872_needit_needit"
+                                                                    }
+                                                                },
+                                                                "type": "MAP_CONTAINER"
+                                                            },
+                                                            "multiInstField": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "navigationOptions": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "params": {
+                                                                "container": {
+                                                                    "listTitle": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": "Overdue NeedIts"
+                                                                    },
+                                                                    "listView": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": "Experience_list"
+                                                                    },
+                                                                    "query": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": "active=true^u_when_needed&lt;javascript:gs.beginningOfToday()"
+                                                                    }
+                                                                },
+                                                                "type": "MAP_CONTAINER"
+                                                            },
+                                                            "passiveNavigation": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "redirect": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "route": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "simple-list"
+                                                            },
+                                                            "targetRoute": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "title": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "4074341483f15250df95f655eeaad364"
+                                                },
+                                                "operation": null,
+                                                "targetId": "cmddgghdvjjffaabbwiiddffiiffdiipciiiifjj",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -846,7 +938,46 @@
                                 },
                                 "elementId": "request_type_pie",
                                 "elementLabel": " Request type pie",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "cmddggieysuaabbwmddffiiffpddlxmodds",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "x_58872_needit.NAV_ITEM_SELECTED_RELAY_78ace79f83ad5210df95f655eeaad39e",
+                                                    "payload": {
+                                                        "script": {
+                                                            "apiVersion": "1.0.0",
+                                                            "controllerElementId": null,
+                                                            "inlineScript": "/**\n * @param {params} params\n * @param {api} params.api\n * @param {any} params.event\n */\nfunction evaluateEvent({\n    api,\n    event\n}) {\n    return {\n        route: 'simple-list',\n        fields: {\n            'table': event.payload.params.table\n        },\n        params: {\n            'listTitle': event.payload.title,\n            'query': event.payload.params.query,\n            'listView': 'Experience_list'\n        },\n        redirect: null,\n        passiveNavigation: null,\n        title: null,\n        multiInstField: null,\n        targetRoute: null,\n        external: null,\n        navigationOptions: null\n    };\n}",
+                                                            "scriptSysId": null,
+                                                            "target": null
+                                                        },
+                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                    },
+                                                    "sysId": "4074341483f15250df95f655eeaad364"
+                                                },
+                                                "operation": null,
+                                                "targetId": "cmddggieysuaabbwnddffiiffxjaaizauk",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -2139,7 +2270,46 @@
                                 },
                                 "elementId": "list___simple_1",
                                 "elementLabel": "List - Simple 1",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "cmddggjmopaaacceiiddffiiffbxnfpggsg",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#DATA_FETCH_SUCCEEDED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#DATA_FETCH_SUCCEEDED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf_page.NOW_UXF_PAGE#ADD_NOTIFICATIONS",
+                                                    "payload": {
+                                                        "script": {
+                                                            "apiVersion": "1.0.0",
+                                                            "controllerElementId": null,
+                                                            "inlineScript": "/**\n * @param {params} params\n * @param {api} params.api\n * @param {any} params.event\n * @param {any} params.imports\n */\nfunction evaluateEvent({\n    api,\n    event\n}) {\n\n    // Get the query value from the payload\n    var payloadQuery = event.payload.query;\n\n    return {\n        items: [{\n            \"content\": {\n                \"type\": \"html\",\n                \"value\": \"&lt;span&gt;&lt;em&gt;NeedIt&lt;/em&gt; records were fetched successfully with query &lt;strong&gt;\" + payloadQuery + \"&lt;/strong&gt;.&lt;/span&gt;\"\n            },\n            \"action\": {\n                \"type\": \"dismiss\"\n            }\n        }]\n    };\n}",
+                                                            "scriptSysId": null,
+                                                            "target": null
+                                                        },
+                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                    },
+                                                    "sysId": "49fe7d575f983bb3f8eea3fa8d40694c"
+                                                },
+                                                "operation": null,
+                                                "targetId": "cmddggjmopaaaccejjddffiiffbccsddkaeel",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -2494,7 +2664,7 @@
         <data>[]</data>
         <description/>
         <disable_auto_reflow>false</disable_auto_reflow>
-        <dispatched_events/>
+        <dispatched_events>4074341483f15250df95f655eeaad364</dispatched_events>
         <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <extension_point/>
@@ -2578,14 +2748,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-04 09:47:09</sys_created_on>
         <sys_id>78ace79f83ad5210df95f655eeaad39e</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>NeedIt Admin home</sys_name>
-        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_package display_value="NeedIt old" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
-        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope display_value="NeedIt old">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_ux_macroponent_78ace79f83ad5210df95f655eeaad39e</sys_update_name>
         <sys_updated_by>aagoel</sys_updated_by>
-        <sys_updated_on>2024-11-06 09:17:41</sys_updated_on>
+        <sys_updated_on>2024-11-07 01:47:41</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=78ace79f83ad5210df95f655eeaad39e"/>
 </record_update>
